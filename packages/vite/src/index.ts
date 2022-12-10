@@ -49,6 +49,8 @@ export default function linaria({
 
   return {
     name: 'linaria',
+    // enforce post as we should resolve files after vite change aliases
+    enforce: 'post',
     configResolved(resolvedConfig: ResolvedConfig) {
       config = resolvedConfig;
     },
